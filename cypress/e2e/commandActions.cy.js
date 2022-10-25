@@ -8,9 +8,17 @@ it('type',()=>{
         .type(112233344)
 })
 
-it.only('focus',()=>{
+it ('focus',()=>{
     cy.visit('https://next.privat24.ua/mobile?lang=en')
         .get('[data-qa-node="amount"]')
         .clear()
         .focus()
 })
+
+//blur highlighted filed with error
+/*it.only ('blur',()=>{
+    cy.visit('https://next.privat24.ua/mobile?lang=en')
+        .get('[data-qa-node="amount"]')
+        .clear()
+        .focus()
+})*/
