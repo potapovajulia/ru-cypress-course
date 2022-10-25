@@ -5,17 +5,18 @@
 it ('should',()=>{
     cy.visit('https://next.privat24.ua/mobile?lang=en')   
     cy.get('[data-qa-node="amount"]')
-        .type(100)
-        .should('have.value', '120 100')
+         .clear()   
+         .type(100)
+        .should('have.value', '100')
         .and('be.visible')
 })
 
 //
-it ('expect',()=>{
+it.only ('expect',()=>{
     cy.visit('https://next.privat24.ua/mobile?lang=en')   
     cy.get('[data-qa-node="amount"]')
-        .type(100).then(input=>{
-        expect(input).to.have.value('120 100')
+        .clear().type(100).then(input=>{
+        expect(input).to.have.value('100')
         })
 })
 
@@ -36,7 +37,7 @@ it ('check is correct attr in button',()=>{
         
 })
 
-it.only ('check is correct url',()=>{
+it ('check is correct url',()=>{
     cy.visit('https://next.privat24.ua?lang=en')   
     cy.url()
         .should('eq','https://next.privat24.ua/?lang=en')        
