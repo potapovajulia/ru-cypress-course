@@ -1,0 +1,8 @@
+# Dependency directory
+node_modules
+
+# Directories for videos and screenshots
+# https://docs.cypress.io/guides/references/configuration#Videos
+cypress/videos
+# https://docs.cypress.io/guides/references/configuration#Screenshots
+cypress/screenshots
